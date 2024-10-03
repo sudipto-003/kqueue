@@ -1,8 +1,8 @@
 # k8s-wq
-// TODO(user): Add simple overview of use/purpose
+**kqueue** is a naive custom controller that implements native kubernetes work queue.
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+It is a pet project to demonstrate k8s custom controller, **kqueue** aims to provide a simple working queue with kubernetes custom resources. It will declare schemas for *event*, *eventMapper* and *worker* resources.
 
 ## Getting Started
 
@@ -19,8 +19,8 @@
 make docker-build docker-push IMG=<some-registry>/k8s-wq:tag
 ```
 
-**NOTE:** This image ought to be published in the personal registry you specified. 
-And it is required to have access to pull the image from the working environment. 
+**NOTE:** This image ought to be published in the personal registry you specified.
+And it is required to have access to pull the image from the working environment.
 Make sure you have the proper permission to the registry if the above commands don’t work.
 
 **Install the CRDs into the cluster:**
@@ -35,7 +35,7 @@ make install
 make deploy IMG=<some-registry>/k8s-wq:tag
 ```
 
-> **NOTE**: If you encounter RBAC errors, you may need to grant yourself cluster-admin 
+> **NOTE**: If you encounter RBAC errors, you may need to grant yourself cluster-admin
 privileges or be logged in as admin.
 
 **Create instances of your solution**
@@ -111,4 +111,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
